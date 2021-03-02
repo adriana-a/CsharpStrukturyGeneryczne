@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Typu-yGeneryczne", "1_Typu-yGeneryczne\1_Typu-yGeneryczne.csproj", "{BA63B66E-88F2-4C5C-9184-C87FA292DA95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_TypyGeneryczne", "1_Typu-yGeneryczne\1_TypyGeneryczne.csproj", "{BA63B66E-88F2-4C5C-9184-C87FA292DA95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_KolekcjeGeneryczne", "2_KolekcjeGeneryczne\2_KolekcjeGeneryczne.csproj", "{7E53F23F-87B4-47FB-94A7-4B9DCAD85478}"
 EndProject
