@@ -38,7 +38,7 @@ namespace _1_Typu_yGeneryczne
 
         }
 
-        public double Read()
+        public double Czytaj()
         {
             var result = bufor[startOfBufor];
             startOfBufor = (startOfBufor + 1) % bufor.Length;

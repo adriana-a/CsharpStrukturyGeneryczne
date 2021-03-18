@@ -35,8 +35,13 @@ namespace _1_Typu_yGeneryczne
 
             while (!kolejka.IsEmpty)
             {
-                Console.WriteLine("\t\t" + kolejka.Read()); 
+                Console.WriteLine("\t\t" + kolejka.Czytaj()); 
             }
+
+            Console.ReadKey();
+        
         }
+
+
     }
 }
