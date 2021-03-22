@@ -12,10 +12,40 @@ namespace _1_Typu_yGeneryczne
         {
 
 
-            var kolejka = new KolejkaKołowa(pojemnosc: 3);
-            
+            var kolejka = new KolejkaKołowa<double>(pojemnosc: 3);
+            var kolejkaInt = new KolejkaKołowa<int>();
 
 
+
+
+
+            WprowadzanieDanych(kolejka);
+
+            double suma = PrzetwarzanieDanych(kolejka);
+
+            Console.WriteLine(suma);
+
+            Console.ReadKey();
+
+        }
+
+        private static double PrzetwarzanieDanych(KolejkaKołowa<double> kolejka)
+        {
+            double suma = 0;
+            Console.WriteLine("W naszej kolejce jest:  ");
+
+            while (!kolejka.IsEmpty)
+            {
+
+                suma += (double)kolejka.Czytaj();
+
+            }
+
+            return suma;
+        }
+
+        private static void WprowadzanieDanych(KolejkaKołowa<double> kolejka)
+        {
             while (true)
             {
                 var startValue = Console.ReadLine();
@@ -30,18 +60,11 @@ namespace _1_Typu_yGeneryczne
                 break;
 
             }
-
-            Console.WriteLine("W naszej kolejce jest:  ");
-
-            while (!kolejka.IsEmpty)
-            {
-                Console.WriteLine("\t\t" + kolejka.Czytaj()); 
-            }
-
-            Console.ReadKey();
-        
         }
-
-
     }
+
+
+
+
+
 }

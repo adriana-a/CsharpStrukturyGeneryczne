@@ -10,7 +10,7 @@ namespace _1_TypyGeneryczneTests
         [TestMethod]
         public void NewKolejkaIsEmpty()
         {
-            var kolejka = new KolejkaKołowa();
+            var kolejka = new KolejkaKołowa<int>();
 
             Assert.IsTrue(kolejka.IsEmpty);
         }
@@ -19,7 +19,7 @@ namespace _1_TypyGeneryczneTests
         [TestMethod]
         public void KolejkaIsNotEmptyAfterFreeSaves()
         {
-            var kolejka = new KolejkaKołowa(pojemnosc : 3);
+            var kolejka = new KolejkaKołowa<double>(pojemnosc : 3);
             kolejka.Save(4);
             kolejka.Save(7);
             kolejka.Save(6);
@@ -31,7 +31,7 @@ namespace _1_TypyGeneryczneTests
         [TestMethod]
         public void FirstElementisFirstOut()
         {
-            var kolejka = new KolejkaKołowa(pojemnosc: 3);
+            var kolejka = new KolejkaKołowa<double>(pojemnosc: 3);
 
             var value1 = 6;
             var value2 = 7;
@@ -47,28 +47,7 @@ namespace _1_TypyGeneryczneTests
         }
 
 
-        [TestMethod]
-        public void OverwriteWhenIsBiggerThanPojemnosc()
-        {
-            var kolejka = new KolejkaKołowa(pojemnosc: 3);
-
-            var value = new[] { 1, 2, 3, 4, 5, 6}; 
-          
-            foreach (var item in value)
-            {
-                kolejka.Save(item);
-            }
-
-            Assert.IsTrue(kolejka.IsFull);
-            Assert.AreEqual(value[3], kolejka.Czytaj());
-            Assert.AreEqual(value[4], kolejka.Czytaj());
-            Assert.AreEqual(value[5], kolejka.Czytaj());
-
-            Assert.IsTrue(kolejka.IsEmpty);
-
-
-
-        }
+        
 
     }
 }

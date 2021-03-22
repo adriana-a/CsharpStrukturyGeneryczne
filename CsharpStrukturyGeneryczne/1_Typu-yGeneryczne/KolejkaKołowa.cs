@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _1_Typu_yGeneryczne
 {
-    public class KolejkaKołowa
+    public class KolejkaKołowa <T>
     {
 
-        private double[] bufor;
+        private T[] bufor;
         private int startOfBufor;
         private int endOfBufor;
 
@@ -21,14 +21,14 @@ namespace _1_Typu_yGeneryczne
         public KolejkaKołowa(int pojemnosc)
         {
 
-            bufor = new double[pojemnosc + 1];
+            bufor = new T[pojemnosc + 1];
             startOfBufor = 0;
             endOfBufor = 0;
 
         }
 
 
-        public void Save(double wartosc)
+        public void Save(T wartosc)
         {
             bufor[endOfBufor] = wartosc;
             endOfBufor = (endOfBufor + 1) % bufor.Length;
@@ -38,7 +38,7 @@ namespace _1_Typu_yGeneryczne
 
         }
 
-        public double Czytaj()
+        public T Czytaj()
         {
             var result = bufor[startOfBufor];
             startOfBufor = (startOfBufor + 1) % bufor.Length;
